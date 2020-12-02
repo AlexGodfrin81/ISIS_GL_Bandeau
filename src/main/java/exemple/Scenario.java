@@ -70,8 +70,14 @@ public class Scenario {
             monBandeau.sleep(100);
         }
         
-        //End
+        //Font
+        for (int i=0;i<10;i++){
+            monBandeau.setFont(ef.randomFont(i*5));
+            monBandeau.sleep(100);
+        }
         monBandeau.sleep(1000);
+        
+        //End
         monBandeau.setMessage("On termine");
         monBandeau.sleep(1000);
         monBandeau.setMessage("");
@@ -80,6 +86,7 @@ public class Scenario {
             monBandeau.sleep(40);
         }
         monBandeau.setForeground(Color.BLACK);
+        monBandeau.setFont(ef.randomFont(25));
         monBandeau.setMessage("Désolé, trop tentant...");
         monBandeau.sleep(800);
         monBandeau.setMessage(":3");

@@ -16,6 +16,7 @@ import java.util.Random;
 public class Effets {
     
     Color[] listColor = {Color.RED,Color.BLUE,Color.GREEN,Color.YELLOW,Color.ORANGE,Color.MAGENTA};
+    String[] fontName = {"Monospaced","SansSerif","Dialog"};
     
     public Effets(){}
     
@@ -39,6 +40,11 @@ public class Effets {
         char[] tab = pendu.toCharArray();
         tab[index] = lettre;
         return String.valueOf(tab);
+    }
+    
+    public Font randomFont(int taille){
+        Random rng = new Random();
+        return new Font(fontName[rng.nextInt(fontName.length)],Font.PLAIN,taille);
     }
     
 }
